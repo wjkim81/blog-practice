@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n staticfiles wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<div class="container clearfix">
+  {{ page.body|richtext }}
+</div>
+{% endblock %}
