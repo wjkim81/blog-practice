@@ -2,6 +2,7 @@
 {% load wagtailcore_tags static %}
 
 {% block content %}
+<h2>Posts tagged with '{{ tag }}'</h2>
     {% if category %}
     <h2>{{ category }}</h2>
     {% endif %}
@@ -9,6 +10,7 @@
     <h2>Posts tagged with '{{ tag }}'</h2>
     {% endif %}
 
+    
     {% for rl in self.related_links.all %}
         <p>{{ rl.title }}: <a href='{{ rl.link_page.url }}'>{{ rl.link_page }}</a></p>
     {% endfor %}
